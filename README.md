@@ -27,18 +27,18 @@
 **数学模型**  
 使用**狄利克雷过程（Dirichlet Process, DP）**描述本质的生成机制：  
 $$\text{本质} | \text{存在} \sim DP(\alpha, H)$$  
-- 基分布 \( H = \varnothing \)（空集对应无预设本质）  
-- 集中参数 \( \alpha \to 0 \)（自由选择主导本质生成）
+- 基分布 \( $$H = \varnothing$$ \)（空集对应无预设本质）  
+- 集中参数 \( $$\alpha \to 0$$ \)（自由选择主导本质生成）
 
 **证明**  
 1. **stick-breaking构造**：  
    $$\text{本质} = \sum_{k=1}^\infty \beta_k \delta_{\theta_k}, \quad \beta_k = V_k \prod_{i=1}^{k-1}(1-V_i)$$  
-   其中 \( V_k \sim \text{Beta}(1,\alpha) \), \( \theta_k \) 由选择行为生成  
+   其中 \( $$V_k \sim \text{Beta}(1,\alpha$$) \), \( $$\theta_k$$ \) 由选择行为生成  
 2. **存在优先性定理**：  
    当 \( $$\alpha \to 0$$ \) 时，\( $$\mathbb{P}(\exists k: \beta_k > 0) = 0$$ \)，即初始状态无本质
 
 **哲学解读**  
-每个选择 \( \theta_k \) 如同自我定义的"本质碎片"，\( \beta_k \) 代表其权重。无限级数和表明本质是自由选择的累积过程。
+每个选择 \( $$\theta_k$$ \) 如同自我定义的"本质碎片"，\( $$\beta_k$$ \) 代表其权重。无限级数和表明本质是自由选择的累积过程。
 
 ---
 
@@ -49,19 +49,19 @@ $$\text{本质} | \text{存在} \sim DP(\alpha, H)$$
 
 **数学模型**  
 构建过滤概率空间 \( $$(\Omega, \{\mathcal{F}_t\}, P)$$ \):  
-- \( \mathcal{F}_t = \sigma(\{A_s\}_{s\leq t}) \vee \mathcal{N} \)  
-- \( A_t \) 为 \( \mathcal{F}_t \)-适应过程，代表自由选择
+- \( $$\mathcal{F}_t = \sigma(\{A_s\}_{s\leq t}) \vee \mathcal{N}$$ \)  
+- \( $$A_t$$ \) 为 \( $$\mathcal{F}_t$$ \)-适应过程，代表自由选择
 
 **关键性质**  
 $$\mathbb{P}(A_t \notin \mathcal{F}_{t^-}) > 0$$  
 （选择不断创造新的可能性）
 
 **证明**  
-1. 假设 \( \forall t, A_t \in \mathcal{F}_{t^-} \)，则存在性轨迹可预测，矛盾于自由意志  
-2. 根据选择公理，存在非可测集 \( \mathcal{N} \in \mathcal{F}_\infty \)，容纳未被实现的可能状态
+1. 假设 \( $$\forall t, A_t \in \mathcal{F}_{t^-}$$ \)，则存在性轨迹可预测，矛盾于自由意志  
+2. 根据选择公理，存在非可测集 \( $$\mathcal{N} \in \mathcal{F}_\infty$$ \)，容纳未被实现的可能状态
 
 **哲学解读**  
-选择行为 \( A_t \) 不断扩展认知边界（\( \sigma \)-代数增长），未实现的可能状态构成存在焦虑的数学根源。
+选择行为 \( $$A_t$$ \) 不断扩展认知边界（\( $$\sigma$$ \)-代数增长），未实现的可能状态构成存在焦虑的数学根源。
 
 ---
 
@@ -73,17 +73,17 @@ $$\mathbb{P}(A_t \notin \mathcal{F}_{t^-}) > 0$$
 **数学模型**  
 定义**耦合荒诞测度**：  
 $$\mathcal{A}(Z,Y) = \inf_{\pi \in \Pi(P_Z,P_Y)} \mathbb{E}_\pi[d(z,y)]$$  
-- \( Z \subset \mathcal{Z} \)（认知期望空间，紧度量空间）  
-- \( Y \subset \mathcal{Y} \)（现实空间，非紧Hausdorff空间）  
-- \( d(z,y) \) 为语义距离函数
+- \( $$Z \subset \mathcal{Z$$} \)（认知期望空间，紧度量空间）  
+- \( $$Y \subset \mathcal{Y}$$ \)（现实空间，非紧Hausdorff空间）  
+- \( $$d(z,y)$$ \) 为语义距离函数
 
 **定理**  
-当 \( \mathcal{Y} \) 非紧时，  
+当 \( $$\mathcal{Y}$$ \) 非紧时，  
 $$\lim_{t \to \infty} \mathcal{A}(Z,Y_t) \to \infty \quad \text{a.s.}$$  
 
 **证明**  
-1. 根据紧空间性质，\( \forall \epsilon >0 \), \( \exists y \in \mathcal{Y} \) 使得 \( d(z,y) > 1/\epsilon \)  
-2. 当 \( \mathcal{Y} \) 维度增长时，最小耦合距离发散
+1. 根据紧空间性质，\( $$\forall \epsilon >0$$ \), \( $$\exists y \in \mathcal{Y}$$ \) 使得 \( $$d(z,y) > 1/\epsilon$$ \)  
+2. 当 \( $$\mathcal{Y}$$ \) 维度增长时，最小耦合距离发散
 
 **哲学解读**  
 人类有限的认知框架（紧空间）与无限复杂的现实（非紧空间）必然产生不可调和的荒诞。
@@ -98,20 +98,20 @@ $$\lim_{t \to \infty} \mathcal{A}(Z,Y_t) \to \infty \quad \text{a.s.}$$
 **数学模型**  
 构建随机最优控制问题：  
 $$\sup_{A \in \mathcal{A}} \mathbb{E}\left[ \int_0^\tau e^{-\beta t} u(S_t,A_t)dt \right]$$  
-- 停时 \( \tau \sim S(t) = e^{-\int_0^t \lambda(s)ds} \)  
-- 状态方程：\( dS_t = \mu(S_t,A_t)dt + \sigma(S_t,A_t)dW_t \)
+- 停时 \( $$\tau \sim S(t) = e^{-\int_0^t \lambda(s)ds}$$ \)  
+- 状态方程：\( $$dS_t = \mu(S_t,A_t)dt + \sigma(S_t,A_t)dW_t$$ \)
 
 **解析解特性**  
-当 \( \lambda'(t) > 0 \) 且 \( \sigma \neq 0 \)，最优策略 \( A_t^* \) 满足：  
-- \( t < t_c \) 时：\( A_t^* \) 追求高风险高回报  
-- \( t \geq t_c \) 时：\( A_t^* \) 趋于保守本真选择  
+当 \( $$\lambda'(t) > 0$$ \) 且 \( $$\sigma \neq 0$$ \)，最优策略 \( $$A_t^*$$ \) 满足：  
+- \( $$t < t_c$$ \) 时：\( $$A_t^*$$ \) 追求高风险高回报  
+- \( $$t \geq t_c$$ \) 时：\( $$A_t^*$$ \) 趋于保守本真选择  
 
 **证明**  
 1. 通过Hamilton-Jacobi-Bellman方程求解析解  
-2. 死亡风险率 \( \lambda(t) \) 在目标函数中引入时间贴现因子 \( e^{-\beta t} \)
+2. 死亡风险率 \( $$\lambda(t)$$ \) 在目标函数中引入时间贴现因子 \( $$e^{-\beta t}$$ \)
 
 **哲学解读**  
-临界时间 \( t_c \) 对应从"沉沦状态"到"本真存在"的相变点，由个体死亡率认知决定。
+临界时间 \( $$t_c$$ \) 对应从"沉沦状态"到"本真存在"的相变点，由个体死亡率认知决定。
 
 ---
 
@@ -123,15 +123,15 @@ $$\sup_{A \in \mathcal{A}} \mathbb{E}\left[ \int_0^\tau e^{-\beta t} u(S_t,A_t)d
 **数学模型**  
 量子化博弈效用：  
 $$U_i(a) = \langle \psi | \hat{U}_i(a) | \psi \rangle$$  
-- \( |\psi\rangle \in \mathcal{H} \)（存在态的希尔伯特空间）  
-- \( \hat{U}_i(a) \) 为作用在 \( \mathcal{H} \) 上的效用算子
+- \( $$|\psi\rangle \in \mathcal{H}$$ \)（存在态的希尔伯特空间）  
+- \( $$\hat{U}_i(a) \) 为作用在 \( \mathcal{H}$$ \) 上的效用算子
 
 **纳什均衡条件**  
 $$\forall i, \quad \langle \psi | \hat{U}_i(a_i^*,a_{-i}^*) | \psi \rangle \geq \langle \psi | \hat{U}_i(a_i,a_{-i}^*) | \psi \rangle$$
 
 **证明**  
 1. 根据量子决策理论，选择导致态矢量坍缩  
-2. 均衡策略 \( a^* \) 对应使 \( |\psi\rangle \) 稳定的测量基
+2. 均衡策略 \( $$a^*$$ \) 对应使 \( $$|\psi\rangle$$ \) 稳定的测量基
 
 **哲学解读**  
 责任产生于量子态坍缩的不可逆性——每个选择永久改变自我认知的"态空间"。
@@ -141,18 +141,18 @@ $$\forall i, \quad \langle \psi | \hat{U}_i(a_i^*,a_{-i}^*) | \psi \rangle \geq 
 ### **严格性验证**
 
 1. **测度论基础**  
-   所有模型在标准Borel空间 \( (\Omega, \mathcal{F}, P) \) 上构建，满足：  
+   所有模型在标准Borel空间 \( $$(\Omega, \mathcal{F}, P)$$ \) 上构建，满足：  
    - Kolmogorov延拓定理保证过程存在性  
    - Radon-Nikodym定理处理概率更新  
 
 2. **存在唯一性定理**  
-   对随机控制问题，当 \( \mu, \sigma \) Lipschitz连续且 \( u \) 有界连续时：  
+   对随机控制问题，当 \( $$\mu, \sigma$$ \) Lipschitz连续且 \($$u$$ \) 有界连续时：  
    - 解的存在性：通过Picard迭代证明  
    - 唯一性：应用Yamada-Watanabe定理  
 
 3. **哲学对应定理**  
-   - 当 \( \mathcal{A} \to \mathcal{F} \)-可测过程全体时，模型收敛于萨特绝对自由  
-   - 若 \( \mathcal{A} \) 受限，稳态解对应海德格尔"常人"（das Man）状态  
+   - 当 \( $$\mathcal{A} \to \mathcal{F}$$ \)-可测过程全体时，模型收敛于萨特绝对自由  
+   - 若 \( $$\mathcal{A}$$ \) 受限，稳态解对应海德格尔"常人"（das Man）状态  
 
 ---
 
@@ -160,13 +160,13 @@ $$\forall i, \quad \langle \psi | \hat{U}_i(a_i^*,a_{-i}^*) | \psi \rangle \geq 
 
 1. **自由的可测性悖论**  
    - 选择自由度的Lebesgue测度与Baire范畴的辩证关系  
-   - 非可测集 \( \mathcal{N} \) 的存在维护了自由的超越性  
+   - 非可测集 \( $$\mathcal{N}$$ \) 的存在维护了自由的超越性  
 
 2. **本质的相变阈值**  
-   - 当狄利克雷过程的累积质量 \( \sum \beta_k > 1-\epsilon \) 时，主观意义发生涌现  
+   - 当狄利克雷过程的累积质量 \( $$\sum \beta_k > 1-\epsilon$$ \) 时，主观意义发生涌现  
 
 3. **荒诞的积分不可约性**  
-   - \( \mathcal{A}(Z,Y) \) 在非紧空间上黎曼不可积，需引入Henstock-Kurzweil积分描述局部适应行为  
+   - \( $$\mathcal{A}(Z,Y)$$ \) 在非紧空间上黎曼不可积，需引入Henstock-Kurzweil积分描述局部适应行为  
 
 ---
 
