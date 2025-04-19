@@ -35,7 +35,7 @@ $$\text{本质} | \text{存在} \sim DP(\alpha, H)$$
    $$\text{本质} = \sum_{k=1}^\infty \beta_k \delta_{\theta_k}, \quad \beta_k = V_k \prod_{i=1}^{k-1}(1-V_i)$$  
    其中 \( V_k \sim \text{Beta}(1,\alpha) \), \( \theta_k \) 由选择行为生成  
 2. **存在优先性定理**：  
-   当 \( \alpha \to 0 \) 时，\( \mathbb{P}(\exists k: \beta_k > 0) = 0 \)，即初始状态无本质
+   当 \( $$\alpha \to 0$$ \) 时，\( $$\mathbb{P}(\exists k: \beta_k > 0) = 0$$ \)，即初始状态无本质
 
 **哲学解读**  
 每个选择 \( \theta_k \) 如同自我定义的"本质碎片"，\( \beta_k \) 代表其权重。无限级数和表明本质是自由选择的累积过程。
@@ -48,7 +48,7 @@ $$\text{本质} | \text{存在} \sim DP(\alpha, H)$$
 海德格尔指出人类被抛入可能性领域，自由体现为对可能性的开拓。
 
 **数学模型**  
-构建过滤概率空间 \( (\Omega, \{\mathcal{F}_t\}, P) \):  
+构建过滤概率空间 \( $$(\Omega, \{\mathcal{F}_t\}, P)$$ \):  
 - \( \mathcal{F}_t = \sigma(\{A_s\}_{s\leq t}) \vee \mathcal{N} \)  
 - \( A_t \) 为 \( \mathcal{F}_t \)-适应过程，代表自由选择
 
